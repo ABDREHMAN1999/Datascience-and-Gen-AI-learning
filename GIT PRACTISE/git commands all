@@ -5,4 +5,8 @@ git init <to initialize a folder so that git tracks it>
 git add . (adds all files and folders and stages for commit)
 git commit -m "message"  (commits the project and changes done, saves , takes a snapshot)
 git branch -m main (goes to the main branch)
-git push origin main
+git push origin main (push last commit to the main branch)
+git pull origin main (pulls the main branch from github to local machine)
+git remote -v (to check the name of the remote repo)
+git branch (check what branch you are currently on ?)
+git branch -m <newname> (to rename a branch)
