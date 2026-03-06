@@ -1,0 +1,8 @@
+
+git clone <link>  (this command will clone a repository on github in our local machine)
+git remote add origin <link> (this command will set a repo on git hub as our destination for the project on our local machine)
+git init <to initialize a folder so that git tracks it>
+git add . (adds all files and folders and stages for commit)
+git commit -m "message"  (commits the project and changes done, saves , takes a snapshot)
+git branch -m main (goes to the main branch)
+git push origin main
