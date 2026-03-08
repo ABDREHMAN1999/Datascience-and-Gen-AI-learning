@@ -1,0 +1,30 @@
+
+import matplotlib.pyplot as plt (importing matplotlib library)
+
+Line plot : 
+data :
+x = [0,1,2,5,8,12,15]
+y = [4,6,8,9,10,14,20]
+code :
+plt.figure(fisize=())  (total size of the canvas where we want to plot)
+plt.subplot()  (rows and columns in our figure and where we want to plot?)
+plt.style.use() (style of the plot)
+plt.plot(x,y, linestyle = "--", color = "red, marker = "o", linewidths="3")   (plots a basic line plot)
+plt.xlabel("xlabel") (label for x axix)
+plt.ylabel("ylabel)  (label for y axis)
+plt.tittle("tittle)  (tittle of the plot)
+plt.xticks(rotate=45) (rotates the x labels)
+plt.tight_layout()  (fit to screen)
+plt.grid(true)   (enables grid)
+plt.show()   (keeps the plot on the screen)
+parameters : 
+linestyle = "--"  (decides the line style)
+color = "red" (decides the color of the line)
+marker = "o"  (marks the data points as "o")
+linewidth = "3"  (thickness of the line)
+markersize = "3" (size of the markers)
+figsize = (12,4)  (creates the initial canvas)
+rotate = 45  (rotates the labels by 45 degrees)
+
+
+Bar plot: 
