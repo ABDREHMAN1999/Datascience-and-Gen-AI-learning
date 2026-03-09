@@ -17,6 +17,7 @@ plt.xticks(rotate=45) (rotates the x labels)
 plt.tight_layout()  (fit to screen)
 plt.grid(true)   (enables grid)
 plt.show()   (keeps the plot on the screen)
+plt.savefig(filename, dpi=300)  (to save a figure)
 parameters : 
 linestyle = "--"  (decides the line style)
 color = "red" (decides the color of the line)
@@ -26,5 +27,18 @@ markersize = "3" (size of the markers)
 figsize = (12,4)  (creates the initial canvas)
 rotate = 45  (rotates the labels by 45 degrees)
 
-
 Bar plot: 
+plt.hist(categories, values, width, color)
+
+Histogram:
+plt.hist(dataseries, bin, color, edgecolor)
+
+scatter plot:
+plt.scatter(x,y, color, marker)
+
+pie plot:
+plt.pie(size, labels, colors , explode, shadow , autopct)
+
+
+
+
