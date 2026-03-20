@@ -13,7 +13,7 @@ git remote -v (to check the name of the remote repo)
 
 Branch Commands : 
 git branch (check what branch you are currently on ?)
-git branch -m <newname> (to rename a branch)
+git branch -m <oldname> <newname> (to rename a branch)  git branch -m main >>> renames the branch that i am currently on to main
 git checkout <branchname> (to change branch name)
 git checkout -b <newbranch> (to create a new branch)
 git branch -d <branchname> (to delete a branch)
