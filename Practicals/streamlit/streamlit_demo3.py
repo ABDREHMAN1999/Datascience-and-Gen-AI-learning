@@ -28,17 +28,23 @@ with st.sidebar:
     cities = st.multiselect("Select City", options = df["City"].unique())
     categories = st.multiselect("Select Category", options = df["Category"].unique())
     min_amount , max_amount = st.slider("Select Amount Range", df["Amount"].min(), df["Amount"].max(), (0,3000))
+    sort_by = st.selectbox("Sort Data by", options= ["Lower to Higher", "Higher to lower"])
     
 st.title("Sales Dashboard")
-filtered_df = df[
-    (df["City"].isin(cities)) & 
-    (df["Category"].isin(categories)) & 
-    (df["Amount"]>= min_amount) & (df["Amount"]<=max_amount)
-]
+search_customer = st.text_input("Enter Customer name: ")
+
 if cities:
     df = df[df["City"].isin(cities)]
 if categories:
     df = df[df["Category"].isin(categories)]
+if min_amount>=0 and max_amount<=3000:
+    df = df[(df["Amount"]>= min_amount) & (df["Amount"]<=max_amount)]
+if search_customer:
+    df = df[df["Customer"].str.contains(search_customer, case=False)]
+if sort_by=="Lower to Higher":
+    df = df.sort_values(by='Amount', ascending=True)
+elif sort_by=="Higher to lower":
+    df = df.sort_values(by='Amount', ascending=False)
 st.write(df)
     
 col1 , col2 , col3 = st.columns(3)
